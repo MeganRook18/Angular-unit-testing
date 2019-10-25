@@ -9,7 +9,8 @@ import { TodosComponent } from './2-todos/todos.component';
 import { VoterComponent } from './1-voter/voter.component';
 import { UserDetailsComponent } from './3-user-details/user-details.component';
 import { UsersComponent } from './users/users.component';
-import { RouterModule } from '@angular/router';
+import { NavComponent } from './nav/nav.component';
+
 
 @NgModule({
   declarations: [
@@ -20,12 +21,12 @@ import { RouterModule } from '@angular/router';
     VoterComponent,
     UsersComponent,
     //NavComponent,
-    HighlightDirective
+    HighlightDirective,
+    NavComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    //RouterModule.forRoot(routes),
     BrowserModule,
     // FormsModule,
 

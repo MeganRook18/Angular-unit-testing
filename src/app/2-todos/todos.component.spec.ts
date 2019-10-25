@@ -23,7 +23,6 @@ describe('TodosComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(TodosComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {
@@ -33,12 +32,11 @@ describe('TodosComponent', () => {
   it('should load todos from the server', () => {
     // fixture.debugElement.injector.get(TodoService);
     // or
-
     let service = TestBed.get(TodoService);
     spyOn(service, 'getTodos').and.returnValue(from([[1, 2, 3]]));
+    fixture.detectChanges();
 
     expect(component.todos.length).toBe(3);
-
 
   });
 });
